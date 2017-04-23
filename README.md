@@ -62,26 +62,8 @@ Each release of Meld is [automatically tested][build-status] against PHP 5.5 and
 You don't need to configure Meld. Just follow the usage instructions, below.
 
 ## Usage ##
-Meld exposes a Twig filter, and a Craft service method. In both cases, Meld expects two parameters, the prefix(es) and the suffix(es).
-
 Meld can cope with a wide variety of prefixes and suffixes, from basic strings, all the way up to arrays of objects. Refer to the "How it works" section, above, for additional information.
 
-### Service ###
-The Meld Craft Service exposes a single method, `meld`, which accepts the prefixes and suffixes as arguments.
-
-For example:
-
-```
-// Returns a single string.
-$result = craft()->meld->meld('Hello', 'World');    // "HelloWorld"
-    
-// Returns an array of strings.
-$prefixes = ['Hello', ['Hola', 'Adios']];
-$suffixes = ['World', ['Tierra', 'Amigo']];
-$melded = craft()->meld->meld($prefixes, $suffixes);
-```
-
-### Twig extension ###
 Use the Meld filter in exactly the same way as any other Twig filter, with the prefix to the left of the pipe, and the suffix as the filter argument.
 
 For example:
