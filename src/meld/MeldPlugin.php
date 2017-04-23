@@ -8,6 +8,7 @@
 
 namespace Craft;
 
+use Experience\Meld\App\Services\MeldService;
 use League\Container\Container;
 use Experience\Meld\App\Helpers\ConfigHelper;
 use Experience\Meld\App\ServiceProviders\PluginServiceProvider;
@@ -168,5 +169,15 @@ class MeldPlugin extends BasePlugin
     public function hasCpSection()
     {
         return false;
+    }
+
+    /**
+     * Registers the Twig extension.
+     *
+     * @return MeldTwigExtension
+     */
+    public function addTwigExtension()
+    {
+        return new MeldTwigExtension(new MeldService());
     }
 }

@@ -1,7 +1,8 @@
-<phpunit bootstrap="bootstrap.php" colors="auto">
+<phpunit bootstrap="bootstrap.php" colors="auto" stopOnFailure="true">
 <testsuites>
     <testsuite name="Meld">
         <directory>app</directory>
+        <directory>twigextensions</directory>
     </testsuite>
 </testsuites>
 <filter>
