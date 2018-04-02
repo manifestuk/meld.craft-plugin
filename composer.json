@@ -1,0 +1,38 @@
+{
+  "name": "experience/meld",
+  "description": "Easily add a prefix or a suffix to an array of strings in your Twig templates.",
+  "type": "craft-plugin",
+  "license": "MIT",
+  "version": "2.0.0",
+  "authors": [
+    {
+      "name": "Stephen Lewis",
+      "email": "stephen@experiencehq.net"
+    }
+  ],
+  "support": {
+    "email": "stephen@experiencehq.net"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "require": {
+    "php": "^7.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "experience\\meld\\": "src/",
+      "experience\\meld\\tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "changelogUrl": "https://github.com/experience/meld.craft-plugin/blob/master/CHANGELOG.md",
+    "documentationUrl": "https://github.com/experience/meld.craft-plugin/blob/master/README.md",
+    "class": "experience\\meld\\Meld",
+    "developer": "Experience",
+    "developerUrl": "https://experiencehq.net",
+    "downloadUrl": "https://github.com/experience/meld.craft-plugin/archive/master.zip",
+    "handle": "meld",
+    "name": "Meld",
+    "sourceLanguage": "en-GB"
+  }
+}
