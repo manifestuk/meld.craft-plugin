@@ -1,6 +1,6 @@
 {
   "name": "experience/meld",
-  "description": "Easily add a prefix or a suffix to an array of strings in your Twig templates.",
+  "description": "Easily combine arrays of strings within your Craft CMS Twig templates.",
   "type": "craft-plugin",
   "license": "MIT",
   "version": "2.0.0",
@@ -27,7 +27,7 @@
   "extra": {
     "handle": "meld",
     "name": "Meld",
-    "description": "Easily combine arrays of strings within your Craft CMS templates.",
+    "description": "Easily combine arrays of strings within your Twig templates.",
     "class": "experience\\meld\\Meld",
     "developer": "Experience",
     "changelogUrl": "https://github.com/experience/meld.craft-plugin/blob/master/CHANGELOG.md",
