@@ -25,14 +25,14 @@
     }
   },
   "extra": {
-    "changelogUrl": "https://github.com/experience/meld.craft-plugin/blob/master/CHANGELOG.md",
-    "documentationUrl": "https://github.com/experience/meld.craft-plugin/blob/master/README.md",
-    "class": "experience\\meld\\Meld",
-    "developer": "Experience",
-    "developerUrl": "https://experiencehq.net",
-    "downloadUrl": "https://github.com/experience/meld.craft-plugin/archive/master.zip",
     "handle": "meld",
     "name": "Meld",
+    "description": "Easily combine arrays of strings within your Craft CMS templates.",
+    "class": "experience\\meld\\Meld",
+    "developer": "Experience",
+    "changelogUrl": "https://github.com/experience/meld.craft-plugin/blob/master/CHANGELOG.md",
+    "documentationUrl": "https://github.com/experience/meld.craft-plugin/blob/master/README.md",
+    "developerUrl": "https://experiencehq.net",
     "sourceLanguage": "en-GB"
   }
 }
