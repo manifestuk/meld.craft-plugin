@@ -1,12 +1,14 @@
-# Meld Craft Plugin #
+# Meld
 
-[![Build Status](https://travis-ci.org/experience/meld.craft-plugin.svg?branch=master)](https://travis-ci.org/experience/meld.craft-plugin)
+Meld is a [Craft plugin][craft]. It eases the process of adding a prefix or a suffix to an array of strings within your Twig templates.
 
-Meld is a Craft plugin which eases the process of adding a prefix or a suffix to an array of strings within your Twig templates.
+[craft]: https://craftcms.com "The official Craft CMS website"
 
-That's pretty useful, but Meld goes further, by allowing you to meld an array of prefixes with an array of suffixes. Let's take a look at a quick example:
+That's pretty useful, but Meld goes further. It allows you to combine an array of prefixes with an array of suffixes.
 
-```
+Let's take a look at a quick example:
+
+```twig
 {% set prefixes = ['Hello', ['Hola', 'Adios']] %}
 {% set suffixes = ['World', ['Tierra', 'Amigo']] %}
 {% set melded = prefixes|meld(suffixes) %}
@@ -30,12 +32,12 @@ That's pretty useful, but Meld goes further, by allowing you to meld an array of
 </ul>
 ```
 
-## How it works ##
+## How it works
 You can throw pretty much anything at Meld, and it will do its best to make sense of the madness.
 
 If either the prefix or the suffix is an array, Meld returns an array of results. Otherwise, Meld returns a single string.
 
-When processing each prefix and suffix "pair", Meld first attempts to coerce the prefix and suffix into a string (assuming they're not already). In practical terms, this means:
+Meld will do its best to coerce each prefix and suffix into a string (assuming it isn't already). In practical terms, this means:
 
 - Integers are converted to their string equivalent;
 - Floats are converted to their string equivalent;
@@ -45,23 +47,36 @@ When processing each prefix and suffix "pair", Meld first attempts to coerce the
 
 It's worth noting that even if the prefix or suffix is an empty string, Meld will still include it in the results. If you don't want this to happen, sanitise your prefixes and suffixes before passing them to Meld. Rubbish in, rubbish out.
 
-## Requirements ##
-Each release of Meld is [automatically tested][build-status] against PHP 5.5 and above. It is also manually tested on the most recent version of Craft.
+## Requirements
+Each release of Meld is automatically tested against PHP 7.1 and above. It is also manually tested on the most recent version of Craft.
 
-[build-status]: https://travis-ci.org/experience/meld.craft-plugin "See the Meld build status on Travis CI"
+### PHP 7.0 support
+In theory, Meld should be compatible with PHP 7.0. In practise, it's impossible to test this.
 
-## Installation ##
+We use Codeception for testing (as is [the Yii way][yii-codeception]), and the Codeception dependency tree includes components which only work with PHP 7.1+.
 
-1. [Download the latest release][download], and unzip it.
-2. Copy the `meld` folder to your `craft/plugins` directory.
-3. Navigate to the "Admin &rarr; Settings &rarr; Plugins" page, and activate Meld.
+[yii-codeception]: https://www.yiiframework.com/doc/guide/2.0/en/test-environment-setup "The Definitive Guide to Yii 2.0"
 
-[download]: https://github.com/experience/meld.craft-plugin/releases/download/0.0.0/meld-0.0.0.zip "Download the latest release"
+Unfortunately there's nothing we can do about that.
 
-## Configuration ##
-You don't need to configure Meld. Just follow the usage instructions, below.
+## Installation
+To install Meld, either search for "Meld" in the Craft Plugin Store, or add it as a [Composer][composer] dependency.
 
-## Usage ##
+[composer]: https://getcomposer.org "Composer is a PHP dependency manager"
+
+Here's how to install Meld using Composer.
+
+1. Open your terminal, and navigate to your Craft project:
+
+        cd /path/to/project
+
+2. Add Meld as a project dependency:
+
+        composer require experience/meld
+
+3. In the Control Panel, go to "Settings → Plugins", and click the "Install" button for Meld
+
+## Usage
 Meld can cope with a wide variety of prefixes and suffixes, from basic strings, all the way up to arrays of objects. Refer to the "How it works" section, above, for additional information.
 
 Use the Meld filter in exactly the same way as any other Twig filter, with the prefix to the left of the pipe, and the suffix as the filter argument.
@@ -77,8 +92,3 @@ For example:
 {% set suffixes = ['World', ['Tierra', 'Amigo']] %}
 {% set melded = prefixes|meld(suffixes) %}
 ```
-
-## Developer documentation ##
-If you need to dig further into the code, the API documentation provides detailed information about every class and method; just open `docs/build/index.html` in your browser to view it.
-
-Note that the search won't work in Chrome, due to JavaScript security restrictions for local files. It should work fine in Firefox and Opera, though.

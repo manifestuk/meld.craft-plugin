@@ -1,9 +1,0 @@
-{
-  "name": "Meld",
-  "description": "Sophisticated Twig prefixes and suffixes made easy.",
-  "version": "1.0.1",
-  "developer": "Experience",
-  "developerUrl": "https://experiencehq.net",
-  "documentationUrl": "https://github.com/experience/meld.craft-plugin/blob/master/README.md",
-  "releasesFeedUrl": "https://raw.githubusercontent.com/experience/meld.craft-plugin/master/releases.json"
-}
