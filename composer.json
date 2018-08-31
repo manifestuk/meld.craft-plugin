@@ -2,7 +2,7 @@
   "name": "experience/meld",
   "description": "Easily combine arrays of strings within your Craft CMS Twig templates.",
   "type": "craft-plugin",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "keywords": [
     "craft",
     "cms",
