@@ -2,37 +2,37 @@
   "name": "experience/meld",
   "description": "Easily combine arrays of strings within your Craft CMS Twig templates.",
   "type": "craft-plugin",
-  "license": "MIT",
   "version": "2.0.0",
-  "authors": [
-    {
-      "name": "Stephen Lewis",
-      "email": "stephen@experiencehq.net"
-    }
+  "keywords": [
+    "craft",
+    "cms",
+    "craftcms",
+    "craft-plugin"
   ],
   "support": {
-    "email": "stephen@experiencehq.net"
+    "docs": "https://github.com/experience/meld.craft-plugin/blob/master/README.md",
+    "issues": "https://github.com/experience/meld.craft-plugin/issues"
   },
-  "minimum-stability": "dev",
-  "prefer-stable": true,
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Experience",
+      "homepage": "https://experiencehq.net"
+    }
+  ],
   "require": {
-    "php": "^7.1.0"
+    "craftcms/cms": "^3.0.0"
   },
   "autoload": {
     "psr-4": {
-      "experience\\meld\\": "src/",
-      "experience\\meld\\tests\\": "tests/"
+      "experience\\meld\\": "src/"
     }
   },
   "extra": {
+    "changelogUrl": "https://github.com/experience/meld.craft-plugin/blob/master/CHANGELOG.md",
+    "class": "experience\\meld\\Meld",
     "handle": "meld",
     "name": "Meld",
-    "description": "Easily combine arrays of strings within your Twig templates.",
-    "class": "experience\\meld\\Meld",
-    "developer": "Experience",
-    "changelogUrl": "https://github.com/experience/meld.craft-plugin/blob/master/CHANGELOG.md",
-    "documentationUrl": "https://github.com/experience/meld.craft-plugin/blob/master/README.md",
-    "developerUrl": "https://experiencehq.net",
     "sourceLanguage": "en-GB"
   }
 }
